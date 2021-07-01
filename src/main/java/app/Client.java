@@ -52,7 +52,8 @@ public class Client extends Thread {
     }
 
     private static void loadProperties() {
-        File file = new File("C:\\Java\\connection.properties");
+        String USER_DIR = System.getProperty("user.dir");
+        File file = new File(USER_DIR + "\\connection.properties");
         Properties properties = new Properties();
         try {
             FR = new FileReader(file);
